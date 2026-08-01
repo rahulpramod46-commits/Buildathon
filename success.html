@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buildathon 2026 Payment Successful</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PDF Library -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <style>
+    .success-section {
+      min-height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .success-card {
+      width: 100%;
+      max-width: 750px;
+      background: rgba(10, 15, 28, .85);
+      border: 1px solid rgba(39, 231, 255, .25);
+      border-radius: 28px;
+      padding: 40px;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .4);
+      text-align: center;
+    }
+
+    .success-icon {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, .15);
+      border: 2px solid rgba(16, 185, 129, .35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 44px;
+      color: #22c55e;
+    }
+
+    .success-card h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .success-card h1 span {
+      color: #27e7ff;
+    }
+
+    .success-card p {
+      color: #9fb3d9;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .receipt-box {
+      background: rgba(39, 231, 255, .08);
+      border: 1px solid rgba(39, 231, 255, .25);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    .receipt-box h3 {
+      color: #27e7ff;
+      margin-bottom: 16px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .receipt-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .receipt-row:last-child {
+      border-bottom: none;
+    }
+
+    .receipt-label {
+      color: #9fb3d9;
+    }
+
+    .receipt-value {
+      color: #eef4ff;
+      font-weight: 600;
+    }
+
+    .actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .secondary-btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #eef4ff;
+      border: 1px solid rgba(39, 231, 255, .25);
+      padding: 14px 22px;
+      border-radius: 16px;
+      transition: .3s;
+    }
+
+    .secondary-btn:hover {
+      background: rgba(39, 231, 255, .08);
+    }
+
+    .email-note {
+      margin-top: 18px;
+      color: #9fb3d9;
+      font-size: 14px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="brand-mark" aria-label="Buildathon Home">
+      <img src="images/logo.png" alt="DRK Institute Logo" class="logo">
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <section class="success-section">
+    <div class="success-card">
+
+      <div class="success-icon">✓</div>
+
+      <span class="badge">PAYMENT CONFIRMED</span>
+
+      <h1>Registration <span>Successful</span></h1>
+
+      <p>
+        Thank you for registering for <b>Buildathon 2026</b>.
+        Your payment has been received successfully and your registration has been confirmed.
+      </p>
+
+      <div class="receipt-box">
+
+        <h3>Payment Receipt</h3>
+
+        <div class="receipt-row">
+          <span class="receipt-label">Registration ID</span>
+          <span class="receipt-value" id="regId">BLD2026-0001</span>
+        </div>
+
+        <div class="receipt-row">
+          <span class="receipt-label">Team Leader</span>
+          <span class="receipt-value" id="leaderName">Rahul</span>
+        </div>
+
+        <div class="receipt-row">
+          <span class="receipt-label">Email</span>
+          <span class="receipt-value" id="email">student@example.com</span>
+        </div>
+
+        <div class="receipt-row">
+          <span class="receipt-label">Department</span>
+          <span class="receipt-value" id="department">CSE</span>
+        </div>
+
+        <div class="receipt-row">
+          <span class="receipt-label">Amount Paid</span>
+          <span class="receipt-value">Rs. 200</span>
+        </div>
+
+        <div class="receipt-row">
+          <span class="receipt-label">Payment Status</span>
+          <span class="receipt-value" style="color:#22c55e;">PAID</span>
+        </div>
+
+        <div class="receipt-row">
+          <span class="receipt-label">Date & Time</span>
+          <span class="receipt-value" id="paymentDate">--</span>
+        </div>
+
+      </div>
+
+      <div class="actions">
+        <button class="primary-btn" onclick="downloadReceipt()">Download Receipt (PDF)</button>
+        <a href="index.html" class="secondary-btn">Return to Home</a>
+      </div>
+
+      <p class="email-note">
+        A confirmation email with your receipt will be sent automatically after backend integration.
+      </p>
+
+    </div>
+    ```
+
+  </section>
+
+  <footer>
+    <p>Buildathon 2026 | DRK Institute of Science & Technology | Department of Computer Science & Engineering</p>
+  </footer>
+
+  <script>
+
+    const registration = JSON.parse(localStorage.getItem('buildathonRegistration') || '{}');
+
+    const registrationId = 'BLD2026-' + Math.floor(1000 + Math.random() * 9000);
+
+    document.getElementById('regId').textContent = registrationId;
+    document.getElementById('leaderName').textContent = registration.leaderName || 'Team Leader';
+    document.getElementById('email').textContent = registration.email || 'student@example.com';
+    document.getElementById('department').textContent = registration.department || 'CSE';
+    document.getElementById('paymentDate').textContent = registration.paymentDate || new Date().toLocaleString();
+
+    registration.registrationId = registrationId;
+
+    localStorage.setItem('buildathonRegistration', JSON.stringify(registration));
+
+    async function downloadReceipt() {
+
+      const { jsPDF } = window.jspdf;
+
+      const doc = new jsPDF();
+
+      doc.setFontSize(20);
+
+      doc.text('DRK Institute of Science & Technology', 20, 20);
+
+      doc.setFontSize(16);
+
+      doc.text('Buildathon 2026 Payment Receipt', 20, 35);
+
+      doc.setFontSize(12);
+
+      doc.text(`Registration ID: ${registrationId}`, 20, 55);
+      doc.text(`Team Leader: ${registration.leaderName || ''}`, 20, 65);
+      doc.text(`Email: ${registration.email || ''}`, 20, 75);
+      doc.text(`Department: ${registration.department || ''}`, 20, 85);
+      doc.text(`Amount Paid: Rs. 200`, 20, 95);
+      doc.text(`Payment Status: PAID`, 20, 105);
+      doc.text(`Date: ${registration.paymentDate || new Date().toLocaleString()}`, 20, 115);
+
+      doc.save(`Buildathon_Receipt_${registrationId}.pdf`);
+
+    }
+
+  </script>
+
+</body>
+
+</html>

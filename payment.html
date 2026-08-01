@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildathon 2026 Payment</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .payment-section {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .payment-card {
+            width: 100%;
+            max-width: 650px;
+            background: rgba(10, 15, 28, .85);
+            border: 1px solid rgba(39, 231, 255, .25);
+            border-radius: 28px;
+            padding: 40px;
+            text-align: center;
+            backdrop-filter: blur(18px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, .4);
+        }
+
+        .payment-card h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .payment-card h1 span {
+            color: #27e7ff;
+        }
+
+        .payment-card p {
+            color: #9fb3d9;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .amount-box {
+            background: rgba(39, 231, 255, .08);
+            border: 1px solid rgba(39, 231, 255, .25);
+            border-radius: 18px;
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+
+        .amount-box h2 {
+            color: #27e7ff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 34px;
+        }
+
+        .qr-box {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .qr-box img {
+            width: 250px;
+            height: 250px;
+            object-fit: contain;
+        }
+
+        .upi-info {
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        .upi-info h3 {
+            color: #27e7ff;
+            margin-bottom: 6px;
+        }
+
+        .upi-info p {
+            color: #eef4ff;
+            margin: 4px 0;
+        }
+
+        .payment-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .secondary-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #eef4ff;
+            border: 1px solid rgba(39, 231, 255, .25);
+            padding: 14px 22px;
+            border-radius: 16px;
+            transition: .3s;
+        }
+
+        .secondary-btn:hover {
+            background: rgba(39, 231, 255, .08);
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #9fb3d9;
+        }
+
+        .secure {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 18px;
+            color: #27e7ff;
+            font-weight: 600;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="brand-mark" aria-label="Buildathon Home">
+            <img src="images/logo.png" alt="DRK Institute Logo" class="logo">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Registration</a>
+        </nav>
+    </header>
+
+    <section class="payment-section">
+
+        ```
+        <div class="payment-card">
+
+            <span class="badge">BUILDATHON 2026 PAYMENT</span>
+
+            <h1>Complete Your <span>Registration</span></h1>
+
+            <p>
+                Scan the QR code below using <b>Google Pay, PhonePe, Paytm, or any UPI app</b>
+                and pay the registration fee. After payment, click <b>I Have Paid</b>.
+            </p>
+
+            <div class="amount-box">
+                <p>Registration Fee</p>
+                <h2>Rs. 200</h2>
+            </div>
+
+            <div class="qr-box">
+                <img src="images/payment-qr.png" alt="UPI QR Code">
+            </div>
+
+            <div class="upi-info">
+                <h3>UPI Details</h3>
+                <p><b>UPI ID:</b> buildathon@upi</p>
+                <p><b>Account Name:</b> DRK Institute of Science & Technology</p>
+                <p><b>Reference:</b> BUILDATHON2026</p>
+            </div>
+
+            <div class="payment-actions">
+                <button id="paidBtn" class="primary-btn">I Have Paid</button>
+                <a href="register.html" class="secondary-btn">Back to Registration</a>
+            </div>
+
+            <div class="secure">Secure UPI Payment</div>
+
+            <p class="note">
+                After successful payment, you will receive a confirmation receipt and an email
+                with your Buildathon registration details.
+            </p>
+
+        </div>
+        ```
+
+    </section>
+
+    <footer>
+        <p>Buildathon 2026 | DRK Institute of Science & Technology | Department of Computer Science & Engineering</p>
+    </footer>
+
+    <script>
+
+        document.getElementById('paidBtn').addEventListener('click', function () {
+
+            const registration = JSON.parse(localStorage.getItem('buildathonRegistration') || '{}');
+
+            registration.paymentStatus = 'Paid';
+
+            registration.amount = 'Rs. 200';
+
+            registration.paymentDate = new Date().toLocaleString();
+
+            localStorage.setItem('buildathonRegistration', JSON.stringify(registration));
+
+            window.location.href = 'success.html';
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildathon 2026 Registration</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="brand-mark" aria-label="Buildathon Home">
+            <img src="images/logo.png" alt="DRK Institute Logo" class="logo">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#domains">Domains</a>
+            <a href="index.html#event">Event</a>
+        </nav>
+    </header>
+
+    <section class="register-section">
+
+        ```
+        <div class="register-container">
+
+            <div class="register-header">
+
+                <span class="badge">
+                    <img src="images/logo.png" alt=" Logo" class="logo">
+                </span>
+
+                <h1>Registration</h1>
+
+                <p>
+                    Fill in your team details below. After registration you will be redirected
+                    to the QR payment page. Once payment is successful, a receipt will be generated
+                    and a confirmation email will be sent automatically.
+                </p>
+
+            </div>
+
+            <form id="registrationForm" class="register-form">
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label>Team Name</label>
+                        <input type="text" name="teamName" placeholder="Team Innovators" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Team Size</label>
+                        <select name="teamSize" required>
+                            <option value="">Select team size</option>
+                            <option>2 Members</option>
+                            <option>3 Members</option>
+                            <option>4 Members</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Team Leader Name</label>
+                        <input type="text" name="leaderName" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Hall Ticket Number</label>
+                        <input type="text" name="hallticket" placeholder="22X31A05XX" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="student@example.com" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Phone Number</label>
+                        <input type="text" name="phone" placeholder="9876543210" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Department</label>
+                        <select name="department" required>
+                            <option value="">Select Department</option>
+                            <option>CSE</option>
+                            <option>CSE-AI</option>
+                            <option>ECE</option>
+                            <option>EEE</option>
+                            <option>MECH</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Year</label>
+                        <select name="year" required>
+                            <option value="">Select Year</option>
+                            <option>1st Year</option>
+                            <option>2nd Year</option>
+                            <option>3rd Year</option>
+                            <option>4th Year</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="field">
+                    <label>Project Domain</label>
+                    <select name="domain" required>
+                        <option value="">Select Domain</option>
+                        <option>Artificial Intelligence</option>
+                        <option>Web Development</option>
+                        <option>Cloud Computing</option>
+                        <option>Cybersecurity</option>
+                        <option>Data Science</option>
+                        <option>Mobile App Development</option>
+                        <option>Open Innovation</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Project Idea</label>
+                    <textarea name="idea" rows="5" placeholder="Describe your project idea in a few lines..."
+                        required></textarea>
+                </div>
+
+                <div class="field checkbox">
+                    <input type="checkbox" id="agree" required> <label for="agree">
+                        I confirm that all the information provided is correct and I agree to the
+                        Buildathon 2026 rules and regulations.
+                    </label>
+                </div>
+
+                <button type="submit" class="primary-btn submit-btn">
+                    Continue to Payment
+                </button>
+
+            </form>
+
+        </div>
+        ```
+
+    </section>
+
+    <footer>
+        <p>Buildathon 2026 | DRK Institute of Science & Technology | Department of Computer Science & Engineering</p>
+    </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function (e) {
+
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            const registration = Object.fromEntries(formData.entries());
+
+            localStorage.setItem('buildathonRegistration', JSON.stringify(registration));
+
+            window.location.href = 'payment.html';
+
+        });
+    </script>
+
+</body>
+
+</html>
