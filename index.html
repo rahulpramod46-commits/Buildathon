@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Buildathon 2026 | DRK Institute of Science & Technology</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         NAVIGATION HEADER
+    ================================= -->
+
+    <header class="navbar">
+
+        <div class="logo wrapper">
+
+            <a href="index.html"
+               class="brand-mark"
+               aria-label="Buildathon Home">
+
+                <img
+                    src="images/logo.png"
+                    alt="DRK Institute Logo"
+                    class="logo">
+
+            </a>
+
+        </div>
+
+        <nav aria-label="Main Navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <!-- Domains replaced with Sectors -->
+            <a href="#sectors">
+                Sectors
+            </a>
+
+            <a href="#event">
+                Event
+            </a>
+
+            <a href="register.html" class="register-btn">
+                Register
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================================
+             HERO SECTION
+        ================================= -->
+
+        <section class="hero">
+
+            <div class="hero-left">
+
+                <span class="badge">
+                    BUILD • INNOVATE • SOLVE
+                </span>
+
+                <h1>
+                    BUILDATHON <span>2026</span>
+                </h1>
+
+                <p>
+                    A 24-hour innovation marathon where students transform
+                    ideas into real-world solutions across Health,
+                    Service, and Technical sectors.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="register.html" class="primary-btn">
+                        Register Now
+                    </a>
+
+                    <a href="#event" class="secondary-btn">
+                        Explore Event
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-right">
+
+                <div class="hero-card">
+
+                    <h3>
+                        Event Highlights
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            24 Hours Coding Challenge
+                        </li>
+
+                        <li>
+                            Team Size: 2-4 Members
+                        </li>
+
+                        <li>
+                            Industry Mentors
+                        </li>
+
+                        <li>
+                            Live Evaluation
+                        </li>
+
+                        <li>
+                            Certificates for All
+                        </li>
+
+                        <li>
+                            Cash Prizes for Winners
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             EVENT INFO SECTION
+        ================================= -->
+
+        <section id="event" class="event-section">
+
+            <div class="event-card">
+
+                <h3>Date</h3>
+
+                <p>
+                    10 Sep 2026
+                </p>
+
+            </div>
+
+
+            <div class="event-card">
+
+                <h3>Time</h3>
+
+                <p>
+                    09:00 AM
+                </p>
+
+            </div>
+
+
+            <div class="event-card">
+
+                <h3>Venue</h3>
+
+                <p>
+                    Seminar Hall, Main Block
+                </p>
+
+            </div>
+
+
+            <div class="event-card">
+
+                <h3>Registration Fee</h3>
+
+                <p>
+                    Free
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             SECTORS SECTION
+        ================================= -->
+
+        <section id="sectors" class="sectors-section">
+
+            <h2>
+                Sectors
+            </h2>
+
+            <p class="sector-subtitle">
+                Explore opportunities across key sectors
+                driving innovation and creating real-world
+                impact for the future.
+            </p>
+
+
+            <div class="sector-grid">
+
+
+                <!-- ==========================
+                     HEALTH SECTOR
+                =========================== -->
+
+                <div class="sector-card health">
+
+                    <img
+                        src="images/Health.png"
+                        alt="Health Sector"
+                        class="sector-image"
+                        loading="lazy">
+
+
+                    <div class="sector-content">
+
+                        <div class="sector-icon">
+                            ❤️
+                        </div>
+
+                        <h3>
+                            Health Sector
+                        </h3>
+
+                        <p>
+                            Innovating for better healthcare,
+                            medical technologies, and
+                            well-being solutions.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="explore-btn"
+                            onclick="openSector('health')">
+
+                            Explore →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==========================
+                     SERVICE SECTOR
+                =========================== -->
+
+                <div class="sector-card service">
+
+                    <img
+                        src="images/Service.png"
+                        alt="Service Sector"
+                        class="sector-image"
+                        loading="lazy">
+
+
+                    <div class="sector-content">
+
+                        <div class="sector-icon">
+                            👥
+                        </div>
+
+                        <h3>
+                            Service Sector
+                        </h3>
+
+                        <p>
+                            Enhancing services, creating
+                            seamless experiences, and
+                            improving everyday lives.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="explore-btn"
+                            onclick="openSector('service')">
+
+                            Explore →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==========================
+                     TECHNICAL SECTOR
+                =========================== -->
+
+                <div class="sector-card technical">
+
+                    <img
+                        src="images/Technical.png"
+                        alt="Technical Sector"
+                        class="sector-image"
+                        loading="lazy">
+
+
+                    <div class="sector-content">
+
+                        <div class="sector-icon">
+                            ⚙
+                        </div>
+
+                        <h3>
+                            Technical Sector
+                        </h3>
+
+                        <p>
+                            Building the future with
+                            cutting-edge technology
+                            and engineering solutions.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="explore-btn"
+                            onclick="openSector('technical')">
+
+                            Explore →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             SECTOR DETAILS MODAL
+        ================================= -->
+
+        <div
+            id="sectorModal"
+            class="sector-modal"
+            aria-hidden="true">
+
+            <div class="modal-box">
+
+                <button
+                    type="button"
+                    class="modal-close"
+                    onclick="closeSector()"
+                    aria-label="Close">
+
+                    ×
+
+                </button>
+
+
+                <h2 id="modalTitle">
+                    Sector
+                </h2>
+
+
+                <p id="modalDescription">
+                    Explore this sector.
+                </p>
+
+
+                <div
+                    id="sectorOptions"
+                    class="sector-options">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================
+             CALL TO ACTION
+        ================================= -->
+
+        <section class="cta">
+
+            <h2>
+                Ready to Build the Future?
+            </h2>
+
+            <p>
+                Join Buildathon 2026 and compete
+                with the brightest minds across
+                multiple sectors.
+            </p>
+
+            <a href="register.html" class="primary-btn">
+                Register Your Team
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+
+        <p>
+            Buildathon 2026 |
+            DRK Institute of Science & Technology |
+            Department of Computer Science & Engineering
+        </p>
+
+    </footer>
+
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

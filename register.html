@@ -1,0 +1,2142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buildathon 2026 | Registration</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Poppins", sans-serif;
+            color: #f2f5ff;
+
+            background:
+                linear-gradient(rgba(3, 8, 22, 0.94),
+                    rgba(3, 8, 22, 0.98)),
+                repeating-linear-gradient(0deg,
+                    transparent 0px,
+                    transparent 39px,
+                    rgba(0, 190, 255, 0.06) 40px),
+                repeating-linear-gradient(90deg,
+                    transparent 0px,
+                    transparent 39px,
+                    rgba(0, 190, 255, 0.06) 40px);
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            width: 100%;
+            min-height: 100px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 8%;
+
+            background: rgba(3, 7, 20, 0.94);
+
+            border-bottom: 1px solid rgba(0, 210, 255, 0.12);
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            backdrop-filter: blur(15px);
+        }
+
+        .brand-mark {
+            width: 140px;
+            height: 82px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(0, 220, 255, 0.25);
+            border-radius: 16px;
+
+            background: rgba(0, 180, 255, 0.04);
+
+            transition: 0.3s ease;
+        }
+
+        .brand-mark:hover {
+            border-color: #20ddff;
+
+            box-shadow:
+                0 0 30px rgba(0, 210, 255, 0.2);
+        }
+
+        .brand-mark img {
+            width: 90px;
+            height: auto;
+        }
+
+        .navbar nav {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .navbar nav a {
+            color: #e8edfb;
+            text-decoration: none;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        .navbar nav a:hover {
+            color: #20ddff;
+
+            text-shadow:
+                0 0 12px rgba(0, 220, 255, 0.5);
+        }
+
+
+        /* ================= MAIN ================= */
+
+        .register-section {
+            width: 100%;
+            max-width: 1450px;
+
+            margin: auto;
+
+            padding: 70px 5% 90px;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        .register-header {
+            text-align: center;
+
+            max-width: 950px;
+
+            margin: 0 auto 55px;
+        }
+
+        .registration-logo {
+            width: 105px;
+            height: 85px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 25px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(0, 220, 255, 0.35);
+
+            background: rgba(0, 180, 255, 0.05);
+
+            box-shadow:
+                0 0 35px rgba(0, 200, 255, 0.12);
+        }
+
+        .registration-logo img {
+            width: 75px;
+        }
+
+        .badge {
+            display: inline-block;
+
+            padding: 8px 18px;
+
+            border-radius: 50px;
+
+            border: 1px solid rgba(0, 220, 255, 0.25);
+
+            background: rgba(0, 220, 255, 0.06);
+
+            color: #20ddff;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 18px;
+        }
+
+        .register-header h1 {
+            font-family: "Orbitron", sans-serif;
+
+            font-size: clamp(42px, 6vw, 68px);
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+            background:
+                linear-gradient(90deg,
+                    #ffffff,
+                    #6eeaff,
+                    #9b68ff);
+
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .register-header p {
+            color: #9daac5;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        /* ================= FORM SECTION ================= */
+
+        .form-section {
+            margin-bottom: 30px;
+
+            padding: 35px;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(145deg,
+                    rgba(14, 25, 51, 0.94),
+                    rgba(7, 13, 30, 0.95));
+
+            border: 1px solid rgba(0, 210, 255, 0.15);
+
+            box-shadow:
+                0 15px 50px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* ================= SECTION HEADING ================= */
+
+        .section-heading {
+            display: flex;
+            align-items: center;
+
+            gap: 18px;
+
+            margin-bottom: 30px;
+        }
+
+        .section-number {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            color: #20ddff;
+
+            background: rgba(0, 220, 255, 0.07);
+
+            border: 1px solid rgba(0, 220, 255, 0.28);
+
+            font-family: "Orbitron", sans-serif;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            flex-shrink: 0;
+        }
+
+        .section-heading h2 {
+            font-family: "Orbitron", sans-serif;
+
+            font-size: 21px;
+
+            margin-bottom: 4px;
+        }
+
+        .section-heading p {
+            color: #7786a3;
+
+            font-size: 12px;
+        }
+
+
+        /* ================= GRID ================= */
+
+        .form-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 22px;
+        }
+
+
+        /* ================= FIELD ================= */
+
+        .field {
+            margin-bottom: 22px;
+        }
+
+        .field label {
+            display: block;
+
+            margin-bottom: 9px;
+
+            color: #dce5fa;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .required {
+            color: #20ddff;
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+
+            width: 100%;
+
+            border: 1px solid rgba(130, 150, 190, 0.2);
+
+            outline: none;
+
+            border-radius: 14px;
+
+            background: #111a2d;
+
+            color: #f2f5ff;
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 14px;
+
+            transition: 0.3s ease;
+        }
+
+        .field input,
+        .field select {
+            height: 57px;
+
+            padding: 0 18px;
+        }
+
+        .field textarea {
+            min-height: 150px;
+
+            padding: 17px 18px;
+
+            resize: vertical;
+        }
+
+        .field input::placeholder,
+        .field textarea::placeholder {
+            color: #69758c;
+        }
+
+        .field select {
+            cursor: pointer;
+        }
+
+        .field select option {
+            background: #0c1528;
+            color: white;
+        }
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+
+            border-color: #20ddff;
+
+            box-shadow:
+                0 0 0 3px rgba(0, 220, 255, 0.06),
+                0 0 25px rgba(0, 210, 255, 0.08);
+        }
+
+        .field small {
+            display: block;
+
+            margin-top: 7px;
+
+            color: #697792;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+        }
+
+
+        /* ================= MEMBER CARD ================= */
+
+        .member-card {
+
+            margin-top: 25px;
+            margin-bottom: 25px;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(145deg,
+                    rgba(8, 19, 40, 0.95),
+                    rgba(5, 12, 27, 0.95));
+
+            border: 1px solid rgba(0, 210, 255, 0.12);
+
+            box-shadow:
+                inset 0 0 30px rgba(0, 200, 255, 0.015);
+
+            transition: 0.3s ease;
+        }
+
+        .member-card:hover {
+            border-color: rgba(0, 220, 255, 0.25);
+
+            transform: translateY(-2px);
+        }
+
+        .member-card.hidden {
+            display: none;
+        }
+
+        .member-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            margin-bottom: 25px;
+
+            padding-bottom: 15px;
+
+            border-bottom: 1px solid rgba(0, 210, 255, 0.1);
+        }
+
+        .member-icon {
+
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: rgba(0, 220, 255, 0.08);
+
+            border: 1px solid rgba(0, 220, 255, 0.18);
+
+            font-size: 18px;
+        }
+
+        .member-title h3 {
+
+            font-family: "Orbitron", sans-serif;
+
+            font-size: 16px;
+
+            color: #eaf5ff;
+        }
+
+        .member-title span {
+
+            display: block;
+
+            margin-top: 3px;
+
+            color: #71809b;
+
+            font-size: 11px;
+        }
+
+
+        /* ================= SECTOR ================= */
+
+        .sector-info {
+
+            margin-top: 12px;
+
+            padding: 13px 16px;
+
+            border-radius: 12px;
+
+            border: 1px solid rgba(0, 220, 255, 0.1);
+
+            background: rgba(0, 200, 255, 0.035);
+
+            color: #8290ac;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+        .sector-info strong {
+            color: #20ddff;
+        }
+
+
+        /* ================= INSTRUCTIONS ================= */
+
+        .instructions-box {
+
+            margin: 35px 0;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(135deg,
+                    rgba(0, 190, 255, 0.06),
+                    rgba(130, 80, 255, 0.05));
+
+            border: 1px solid rgba(0, 210, 255, 0.18);
+        }
+
+        .instructions-header {
+
+            display: flex;
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 22px;
+        }
+
+        .instruction-icon {
+
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: rgba(0, 220, 255, 0.08);
+
+            font-size: 21px;
+        }
+
+        .instructions-header h3 {
+
+            color: #20ddff;
+
+            font-size: 19px;
+
+            margin-bottom: 3px;
+        }
+
+        .instructions-header p {
+
+            color: #7786a3;
+
+            font-size: 12px;
+        }
+
+        .instructions-box ul {
+
+            list-style: none;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 13px 30px;
+        }
+
+        .instructions-box li {
+
+            position: relative;
+
+            padding-left: 22px;
+
+            color: #aeb9d0;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+        .instructions-box li::before {
+
+            content: "✦";
+
+            position: absolute;
+
+            left: 0;
+
+            color: #20ddff;
+        }
+
+        .instructions-box strong {
+            color: #edf3ff;
+        }
+
+
+        /* ================= AGREEMENT ================= */
+
+        .agreement {
+
+            display: flex;
+            align-items: flex-start;
+
+            gap: 12px;
+
+            margin: 25px 0;
+        }
+
+        .agreement input {
+
+            width: 18px;
+            height: 18px;
+
+            margin-top: 3px;
+
+            accent-color: #20ddff;
+
+            cursor: pointer;
+        }
+
+        .agreement label {
+
+            color: #9caac4;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            cursor: pointer;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .submit-btn {
+
+            width: 100%;
+
+            min-height: 60px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            background:
+                linear-gradient(90deg,
+                    #20dfff,
+                    #659aff,
+                    #9856ff);
+
+            color: #06101d;
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 12px 35px rgba(0, 200, 255, 0.18);
+
+            transition: 0.3s ease;
+        }
+
+        .submit-btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 18px 45px rgba(0, 200, 255, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-arrow {
+
+            margin-left: 8px;
+
+            font-size: 20px;
+        }
+
+        .payment-note {
+
+            text-align: center;
+
+            margin-top: 14px;
+
+            color: #687792;
+
+            font-size: 12px;
+        }
+
+        .payment-note strong {
+            color: #20ddff;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-top: 1px solid rgba(0, 200, 255, 0.1);
+
+            background: rgba(3, 7, 19, 0.85);
+        }
+
+        footer p {
+
+            color: #8290ad;
+
+            font-size: 13px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 850px) {
+
+            .navbar {
+
+                height: auto;
+
+                padding: 15px 5%;
+
+                flex-direction: column;
+
+                gap: 18px;
+            }
+
+            .navbar nav {
+                gap: 20px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .instructions-box ul {
+                grid-template-columns: 1fr;
+            }
+
+            .register-section {
+                padding: 55px 5%;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .navbar nav {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .brand-mark {
+
+                width: 115px;
+
+                height: 70px;
+            }
+
+            .brand-mark img {
+                width: 75px;
+            }
+
+            .register-header h1 {
+                font-size: 38px;
+            }
+
+            .register-header p {
+                font-size: 13px;
+            }
+
+            .form-section {
+                padding: 23px 18px;
+            }
+
+            .member-card {
+                padding: 20px 15px;
+            }
+
+            .instructions-box {
+                padding: 22px 18px;
+            }
+
+            .instructions-box ul {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading h2 {
+                font-size: 18px;
+            }
+
+            .section-heading p {
+                font-size: 11px;
+            }
+
+            .field input,
+            .field select {
+                height: 54px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="brand-mark" aria-label="Buildathon Home">
+
+            <img src="images/logo.png" alt="Buildathon Logo">
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#sectors">
+                Sectors
+            </a>
+
+            <a href="index.html#event">
+                Event
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <section class="register-section">
+
+
+            <!-- ================= HEADER ================= -->
+
+            <div class="register-header">
+
+
+                <span class="badge">
+                    BUILD • INNOVATE • SOLVE
+                </span>
+
+
+                <h1>
+                    Registration
+                </h1>
+
+
+                <p>
+                    Register your team for Buildathon 2026.
+                    Select one sector and submit your own
+                    project title, domain, and innovative idea.
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= FORM ================= -->
+
+            <form id="registrationForm">
+
+
+                <!-- =================================================
+                     SECTION 01 — TEAM LEADER
+                ================================================== -->
+
+                <div class="form-section">
+
+                    <div class="section-heading">
+
+                        <span class="section-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Team Details
+                            </h2>
+
+                            <p>
+                                Enter the team leader and team information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- TEAM NAME -->
+
+                        <div class="field">
+
+                            <label for="teamName">
+                                Team Name
+                                <span class="required">*</span>
+                            </label>
+
+                            <input type="text" id="teamName" name="teamName" placeholder="Enter your team name"
+                                required>
+
+                        </div>
+
+
+                        <!-- TEAM SIZE -->
+
+                        <div class="field">
+
+                            <label for="teamSize">
+                                Team Size
+                                <span class="required">*</span>
+                            </label>
+
+                            <select id="teamSize" name="teamSize" required>
+
+                                <option value="">
+                                    Select team size
+                                </option>
+
+                                <option value="2 Members">
+                                    2 Members
+                                </option>
+
+                                <option value="3 Members">
+                                    3 Members
+                                </option>
+
+                                <option value="4 Members">
+                                    4 Members
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- LEADER NAME -->
+
+                        <div class="field">
+
+                            <label for="leaderName">
+                                Team Leader Name
+                                <span class="required">*</span>
+                            </label>
+
+                            <input type="text" id="leaderName" name="leaderName" placeholder="Enter full name" required>
+
+                        </div>
+
+
+                        <!-- LEADER HALL TICKET -->
+
+                        <div class="field">
+
+                            <label for="leaderHallticket">
+                                Hall Ticket Number
+                                <span class="required">*</span>
+                            </label>
+
+                            <input type="text" id="leaderHallticket" name="leaderHallticket"
+                                placeholder="Example: 22X31A05XX" required>
+
+                        </div>
+
+
+                        <!-- LEADER EMAIL -->
+
+                        <div class="field">
+
+                            <label for="leaderEmail">
+                                Email Address
+                                <span class="required">*</span>
+                            </label>
+
+                            <input type="email" id="leaderEmail" name="leaderEmail" placeholder="student@example.com"
+                                required>
+
+                        </div>
+
+
+                        <!-- LEADER PHONE -->
+
+                        <div class="field">
+
+                            <label for="leaderPhone">
+                                Phone Number
+                                <span class="required">*</span>
+                            </label>
+
+                            <input type="tel" id="leaderPhone" name="leaderPhone" placeholder="9876543210"
+                                maxlength="10" required>
+
+                        </div>
+
+
+                        <!-- LEADER DEPARTMENT -->
+
+                        <div class="field">
+
+                            <label for="leaderDepartment">
+                                Department
+                                <span class="required">*</span>
+                            </label>
+
+                            <select id="leaderDepartment" name="leaderDepartment" required>
+
+                                <option value="">
+                                    Select Department
+                                </option>
+
+                                <option>CSE</option>
+                                <option>CSE - AI</option>
+                                <option>ECE</option>
+                                <option>EEE</option>
+                                <option>MECH</option>
+                                <option>CIVIL</option>
+                                <option>OTHER</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- LEADER YEAR -->
+
+                        <div class="field">
+
+                            <label for="leaderYear">
+                                Year
+                                <span class="required">*</span>
+                            </label>
+
+                            <select id="leaderYear" name="leaderYear" required>
+
+                                <option value="">
+                                    Select Year
+                                </option>
+
+                                <option>1st Year</option>
+                                <option>2nd Year</option>
+                                <option>3rd Year</option>
+                                <option>4th Year</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TEAM MEMBERS
+                ================================================== -->
+
+                <div class="form-section">
+
+                    <div class="section-heading">
+
+                        <span class="section-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Team Members
+                            </h2>
+
+                            <p>
+                                Enter the details of all participating team members.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MEMBER 2 -->
+
+                    <div class="member-card hidden" id="member2Card">
+
+                        <div class="member-title">
+
+                            <div class="member-icon">
+                                👤
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Team Member 2
+                                </h3>
+
+                                <span>
+                                    Participant details
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="field">
+
+                                <label>
+                                    Member Name
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input type="text" name="member2Name" id="member2Name" placeholder="Enter full name">
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Hall Ticket Number
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input type="text" name="member2Hallticket" id="member2Hallticket"
+                                    placeholder="Example: 22X31A05XX">
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Email Address
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input type="email" name="member2Email" id="member2Email"
+                                    placeholder="member2@example.com">
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Phone Number
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input type="tel" name="member2Phone" id="member2Phone" maxlength="10"
+                                    placeholder="9876543210">
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Department
+                                    <span class="required">*</span>
+                                </label>
+
+                                <select name="member2Department" id="member2Department">
+
+                                    <option value="">
+                                        Select Department
+                                    </option>
+
+                                    <option>CSE</option>
+                                    <option>CSE - AI</option>
+                                    <option>ECE</option>
+                                    <option>EEE</option>
+                                    <option>MECH</option>
+                                    <option>CIVIL</option>
+                                    <option>OTHER</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Year
+                                    <span class="required">*</span>
+                                </label>
+
+                                <select name="member2Year" id="member2Year">
+
+                                    <option value="">
+                                        Select Year
+                                    </option>
+
+                                    <option>1st Year</option>
+                                    <option>2nd Year</option>
+                                    <option>3rd Year</option>
+                                    <option>4th Year</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MEMBER 3 -->
+
+                    <div class="member-card hidden" id="member3Card">
+
+                        <div class="member-title">
+
+                            <div class="member-icon">
+                                👤
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Team Member 3
+                                </h3>
+
+                                <span>
+                                    Participant details
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="field">
+
+                                <label>
+                                    Member Name
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input type="text" name="member3Name" id="member3Name" placeholder="Enter full name">
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Hall Ticket Number
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input type="text" name="member3Hallticket" id="member3Hallticket"
+                                    placeholder="Example: 22X31A05XX">
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Email Address
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input type="email" name="member3Email" id="member3Email"
+                                    placeholder="member3@example.com">
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Phone Number
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input type="tel" name="member3Phone" id="member3Phone" maxlength="10"
+                                    placeholder="9876543210">
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Department
+                                    <span class="required">*</span>
+                                </label>
+
+                                <select name="member3Department" id="member3Department">
+
+                                    <option value="">
+                                        Select Department
+                                    </option>
+
+                                    <option>CSE</option>
+                                    <option>CSE - AI</option>
+                                    <option>ECE</option>
+                                    <option>EEE</option>
+                                    <option>MECH</option>
+                                    <option>CIVIL</option>
+                                    <option>OTHER</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Year
+                                    <span class="required">*</span>
+                                </label>
+
+                                <select name="member3Year" id="member3Year">
+
+                                    <option value="">
+                                        Select Year
+                                    </option>
+
+                                    <option>1st Year</option>
+                                    <option>2nd Year</option>
+                                    <option>3rd Year</option>
+                                    <option>4th Year</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MEMBER 4 -->
+
+                    <div class="member-card hidden" id="member4Card">
+
+                        <div class="member-title">
+
+                            <div class="member-icon">
+                                👤
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Team Member 4
+                                </h3>
+
+                                <span>
+                                    Participant details
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="field">
+
+                                <label>
+                                    Member Name
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input type="text" name="member4Name" id="member4Name" placeholder="Enter full name">
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Hall Ticket Number
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input type="text" name="member4Hallticket" id="member4Hallticket"
+                                    placeholder="Example: 22X31A05XX">
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Email Address
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input type="email" name="member4Email" id="member4Email"
+                                    placeholder="member4@example.com">
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Phone Number
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input type="tel" name="member4Phone" id="member4Phone" maxlength="10"
+                                    placeholder="9876543210">
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Department
+                                    <span class="required">*</span>
+                                </label>
+
+                                <select name="member4Department" id="member4Department">
+
+                                    <option value="">
+                                        Select Department
+                                    </option>
+
+                                    <option>CSE</option>
+                                    <option>CSE - AI</option>
+                                    <option>ECE</option>
+                                    <option>EEE</option>
+                                    <option>MECH</option>
+                                    <option>CIVIL</option>
+                                    <option>OTHER</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Year
+                                    <span class="required">*</span>
+                                </label>
+
+                                <select name="member4Year" id="member4Year">
+
+                                    <option value="">
+                                        Select Year
+                                    </option>
+
+                                    <option>1st Year</option>
+                                    <option>2nd Year</option>
+                                    <option>3rd Year</option>
+                                    <option>4th Year</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PROJECT DETAILS
+                ================================================== -->
+
+                <div class="form-section">
+
+                    <div class="section-heading">
+
+                        <span class="section-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Project Details
+                            </h2>
+
+                            <p>
+                                Choose one sector and create your own solution.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SECTOR -->
+
+                    <div class="field">
+
+                        <label for="sector">
+
+                            Project Sector
+
+                            <span class="required">*</span>
+
+                        </label>
+
+
+                        <select id="sector" name="sector" required>
+
+                            <option value="">
+                                Select your project sector
+                            </option>
+
+                            <option value="Health Sector">
+                                ❤️ Health Sector
+                            </option>
+
+                            <option value="Service Sector">
+                                👥 Service Sector
+                            </option>
+
+                            <option value="Technical Sector">
+                                ⚙ Technical Sector
+                            </option>
+
+                        </select>
+
+
+                        <div class="sector-info">
+
+                            <strong>
+                                Select one sector:
+                            </strong>
+
+                            Health, Service, or Technical.
+
+                            Your project must be relevant
+                            to the selected sector.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PROJECT TITLE -->
+
+                    <div class="field">
+
+                        <label for="projectTitle">
+
+                            Project Title
+
+                            <span class="required">*</span>
+
+                        </label>
+
+
+                        <input type="text" id="projectTitle" name="projectTitle" placeholder="Enter your project title"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- PROJECT DOMAIN -->
+
+                    <div class="field">
+
+                        <label for="projectDomain">
+
+                            Project Domain
+
+                            <span class="required">*</span>
+
+                        </label>
+
+
+                        <input type="text" id="projectDomain" name="projectDomain"
+                            placeholder="Example: AI, IoT, Blockchain, Web, Robotics..." required>
+
+
+                        <small>
+
+                            Choose any domain you want.
+                            It should be relevant to your selected sector.
+
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- PROJECT IDEA -->
+
+                    <div class="field">
+
+                        <label for="projectIdea">
+
+                            Project Idea
+
+                            <span class="required">*</span>
+
+                        </label>
+
+
+                        <textarea id="projectIdea" name="projectIdea"
+                            placeholder="Describe the problem you are solving and your proposed solution..."
+                            required></textarea>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     INSTRUCTIONS
+                ================================================== -->
+
+                <div class="instructions-box">
+
+                    <div class="instructions-header">
+
+                        <div class="instruction-icon">
+                            ⚡
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Important Instructions
+                            </h3>
+
+                            <p>
+                                Please read carefully before submitting.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <ul>
+
+                        <li>
+                            Each team must have
+                            <strong>2–4 members</strong>.
+                        </li>
+
+                        <li>
+                            Team leader details are
+                            <strong>mandatory</strong>.
+                        </li>
+
+                        <li>
+                            All participating team members
+                            must provide their details.
+                        </li>
+
+                        <li>
+                            Every team must select
+                            <strong>one sector</strong>.
+                        </li>
+
+                        <li>
+                            Available sectors:
+                            <strong>Health, Service, Technical</strong>.
+                        </li>
+
+                        <li>
+                            Teams can choose their
+                            <strong>own project domain</strong>.
+                        </li>
+
+                        <li>
+                            The project must be relevant
+                            to the selected sector.
+                        </li>
+
+                        <li>
+                            Registration details must be
+                            <strong>accurate</strong>.
+                        </li>
+
+                        <li>
+                            Participants should carry their
+                            <strong>College ID / Hall Ticket</strong>.
+                        </li>
+
+                        <li>
+                            Registration fee:
+                            <strong> Free </strong>.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     AGREEMENT
+                ================================================== -->
+
+                <div class="agreement">
+
+                    <input type="checkbox" id="agree" name="agreement" required>
+
+
+                    <label for="agree">
+
+                        I confirm that all the information
+                        provided is correct and I agree to the
+                        Buildathon 2026 rules and regulations.
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SUBMIT
+                ================================================== -->
+
+                <button type="submit" class="submit-btn">
+
+                    Continue
+
+                    <span class="submit-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            Buildathon 2026 |
+            DRK Institute of Science & Technology |
+            Department of Computer Science & Engineering
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                const form =
+                    document.getElementById(
+                        "registrationForm"
+                    );
+
+
+                const teamSize =
+                    document.getElementById(
+                        "teamSize"
+                    );
+
+
+                /* ==========================================
+                   MEMBER CARDS
+                =========================================== */
+
+                const memberCards = {
+
+                    2: document.getElementById(
+                        "member2Card"
+                    ),
+
+                    3: document.getElementById(
+                        "member3Card"
+                    ),
+
+                    4: document.getElementById(
+                        "member4Card"
+                    )
+
+                };
+
+
+                /* ==========================================
+                   MEMBER REQUIRED FIELDS
+                =========================================== */
+
+                const memberFields = {
+
+                    2: [
+                        "member2Name",
+                        "member2Hallticket",
+                        "member2Email",
+                        "member2Phone",
+                        "member2Department",
+                        "member2Year"
+                    ],
+
+                    3: [
+                        "member3Name",
+                        "member3Hallticket",
+                        "member3Email",
+                        "member3Phone",
+                        "member3Department",
+                        "member3Year"
+                    ],
+
+                    4: [
+                        "member4Name",
+                        "member4Hallticket",
+                        "member4Email",
+                        "member4Phone",
+                        "member4Department",
+                        "member4Year"
+                    ]
+
+                };
+
+
+                /* ==========================================
+                   SHOW / HIDE MEMBERS
+                =========================================== */
+
+                function updateMembers() {
+
+                    const size =
+                        parseInt(
+                            teamSize.value
+                        );
+
+                    /* Hide all member cards first */
+
+                    Object.values(memberCards).forEach(
+                        function (card) {
+
+                            card.classList.add(
+                                "hidden"
+                            );
+
+                        }
+                    );
+
+
+                    /* Remove required */
+
+                    Object.values(memberFields).forEach(
+                        function (fields) {
+
+                            fields.forEach(
+                                function (id) {
+
+                                    const element =
+                                        document.getElementById(id);
+
+                                    element.required = false;
+
+                                }
+                            );
+
+                        }
+                    );
+
+
+                    /* Show required members */
+
+                    if (size >= 2) {
+
+                        memberCards[2]
+                            .classList
+                            .remove("hidden");
+
+                        memberFields[2].forEach(
+                            function (id) {
+
+                                document.getElementById(id)
+                                    .required = true;
+
+                            }
+                        );
+
+                    }
+
+
+                    if (size >= 3) {
+
+                        memberCards[3]
+                            .classList
+                            .remove("hidden");
+
+                        memberFields[3].forEach(
+                            function (id) {
+
+                                document.getElementById(id)
+                                    .required = true;
+
+                            }
+                        );
+
+                    }
+
+
+                    if (size >= 4) {
+
+                        memberCards[4]
+                            .classList
+                            .remove("hidden");
+
+                        memberFields[4].forEach(
+                            function (id) {
+
+                                document.getElementById(id)
+                                    .required = true;
+
+                            }
+                        );
+
+                    }
+
+                }
+
+
+                teamSize.addEventListener(
+                    "change",
+                    updateMembers
+                );
+
+
+
+                /* ==========================================
+                   PHONE VALIDATION
+                =========================================== */
+
+                const phoneInputs =
+                    document.querySelectorAll(
+                        'input[type="tel"]'
+                    );
+
+
+                phoneInputs.forEach(
+                    function (input) {
+
+                        input.addEventListener(
+                            "input",
+                            function () {
+
+                                this.value =
+                                    this.value
+                                        .replace(/\D/g, "")
+                                        .slice(0, 10);
+
+                            }
+                        );
+
+                    }
+                );
+
+
+
+                /* ==========================================
+                   HALL TICKET UPPERCASE
+                =========================================== */
+
+                const hallTicketInputs =
+                    document.querySelectorAll(
+                        'input[name*="Hallticket"]'
+                    );
+
+
+                hallTicketInputs.forEach(
+                    function (input) {
+
+                        input.addEventListener(
+                            "input",
+                            function () {
+
+                                this.value =
+                                    this.value.toUpperCase();
+
+                            }
+                        );
+
+                    }
+                );
+
+
+
+                /* ==========================================
+                   FORM SUBMIT
+                =========================================== */
+
+                form.addEventListener(
+                    "submit",
+                    function (event) {
+
+                        event.preventDefault();
+
+
+                        /* Browser validation */
+
+                        if (!form.checkValidity()) {
+
+                            form.reportValidity();
+
+                            return;
+
+                        }
+
+
+                        /* ==================================
+                           COLLECT DATA
+                        =================================== */
+
+                        const formData =
+                            new FormData(form);
+
+
+                        const registration =
+                            Object.fromEntries(
+                                formData.entries()
+                            );
+
+
+                        /* ==================================
+                           REGISTRATION ID
+                        =================================== */
+
+                        registration.registrationId =
+                            "BT26-" +
+                            Date.now();
+
+
+                        /* ==================================
+                           REGISTRATION DATE
+                        =================================== */
+
+                        registration.registrationDate =
+                            new Date().toISOString();
+
+
+                        /* ==================================
+                           SAVE DATA
+                        =================================== */
+
+                        localStorage.setItem(
+                            "buildathonRegistration",
+                            JSON.stringify(
+                                registration
+                            )
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

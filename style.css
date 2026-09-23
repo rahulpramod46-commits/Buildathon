@@ -1,0 +1,779 @@
+/* ==========================================
+BUILDATHON 2026 - Premium Cyber Theme
+========================================== */
+
+:root {
+    --bg: #050816;
+    --bg2: #0b1024;
+    --card: rgba(15, 22, 45, 0.75);
+    --line: rgba(0, 229, 255, 0.25);
+    --cyan: #27e7ff;
+    --blue: #4f7dff;
+    --purple: #9b5cff;
+    --text: #eef4ff;
+    --muted: #9fb3d9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: radial-gradient(circle at top, #101936 0%, #070b16 45%, #05070f 100%);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Animated background grid */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(39, 231, 255, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(39, 231, 255, .05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+    animation: gridMove 18s linear infinite;
+}
+
+@keyframes gridMove {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(40px);
+    }
+}
+
+/* ==========================================
+NAVBAR
+========================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 6%;
+    /* ప్యాడింగ్ తగ్గించి లోగోకి ఎక్కువ స్పేస్ ఇచ్చాం */
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(5, 8, 22, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1000;
+}
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    border-radius: 12px;
+    background: rgba(39, 231, 255, 0.05);
+    border: 1px solid rgba(39, 231, 255, 0.2);
+    box-shadow: 0 0 15px rgba(39, 231, 255, 0.15);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.brand-mark:hover {
+    box-shadow: 0 0 25px rgba(39, 231, 255, 0.4);
+    border-color: rgba(39, 231, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.logo {
+    display: block;
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: screen;
+    filter: huge-rotate(15deg) brightness(1.2) contrast(1.1)drop-shadow(0 0 12px rgba(39, 231, 255, 0.6));
+}
+
+.navbar {
+    padding: 10px 8%;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: var(--cyan);
+    text-shadow: 0 0 10px rgba(39, 231, 255, 0.35);
+}
+
+.navbar .register-btn {
+    padding: 10px 20px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--cyan), var(--purple));
+    color: #04101d;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(39, 231, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar .register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(39, 231, 255, 0.35);
+}
+
+/* ==========================================
+HERO
+========================================== */
+
+.hero {
+    min-height: 85vh;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 8%;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: rgba(39, 231, 255, 0.08);
+    color: var(--cyan);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 64px;
+    line-height: 1.1;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--cyan);
+    text-shadow: 0 0 20px rgba(39, 231, 255, 0.5);
+}
+
+.hero p {
+    color: var(--muted);
+    max-width: 600px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 16px;
+    padding: 14px 26px;
+    transition: all 0.35s ease;
+    display: inline-block;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, var(--cyan), var(--purple));
+    color: #05101d;
+    box-shadow: 0 12px 30px rgba(39, 231, 255, 0.25);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(39, 231, 255, 0.4);
+}
+
+.secondary-btn {
+    border: 1px solid var(--line);
+    color: var(--text);
+}
+
+.secondary-btn:hover {
+    background: rgba(39, 231, 255, 0.08);
+    border-color: var(--cyan);
+}
+
+/* Hero card */
+.hero-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    padding: 32px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.hero-card h3 {
+    color: var(--cyan);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.hero-card ul {
+    list-style: none;
+}
+
+.hero-card li {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: #dce8ff;
+    font-size: 15px;
+}
+
+.hero-card li:last-child {
+    border-bottom: none;
+}
+
+/* ==========================================
+EVENT SECTION
+========================================== */
+
+.event-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 60px 8%;
+}
+
+.event-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(39, 231, 255, 0.18);
+    border-color: rgba(39, 231, 255, 0.5);
+}
+
+.event-card h3 {
+    color: var(--cyan);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* ==========================================
+CTA
+========================================== */
+
+.cta {
+    text-align: center;
+    padding: 80px 8%;
+}
+
+.cta h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.cta p {
+    color: var(--muted);
+    max-width: 650px;
+    margin: 0 auto 32px;
+    line-height: 1.8;
+}
+
+/* ==========================================
+FOOTER
+========================================== */
+
+footer {
+    padding: 30px 8%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+
+/* =========================================
+   SECTORS SECTION
+========================================= */
+
+.sectors-section {
+    padding: 90px 8% 100px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(5, 10, 25, 0.88), rgba(5, 10, 25, 0.96)),
+        radial-gradient(circle at 50% 30%, rgba(0, 200, 255, 0.08), transparent 45%);
+}
+
+.sectors-section h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 48px;
+    color: #f2f5ff;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.sector-subtitle {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #aeb8cf;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   SECTOR GRID
+========================================= */
+
+.sector-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+
+/* =========================================
+   SECTOR CARD
+========================================= */
+
+.sector-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    background: rgba(9, 16, 38, 0.95);
+    border: 1px solid rgba(0, 220, 255, 0.35);
+    box-shadow: 0 0 30px rgba(0, 180, 255, 0.08);
+    transition: 0.4s ease;
+}
+
+.sector-card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 20px 60px rgba(0, 190, 255, 0.18),
+        0 0 25px rgba(0, 210, 255, 0.12);
+}
+
+
+/* Service Card */
+
+.sector-card.service {
+    border-color: rgba(170, 80, 255, 0.45);
+}
+
+
+/* Technical Card */
+
+.sector-card.technical {
+    border-color: rgba(100, 255, 70, 0.4);
+}
+
+
+/* =========================================
+   SECTOR IMAGE
+========================================= */
+
+.sector-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.sector-card:hover .sector-image {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   SECTOR CONTENT
+========================================= */
+
+.sector-content {
+    padding: 28px 25px 30px;
+    min-height: 210px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================
+   SECTOR ICON
+========================================= */
+
+.sector-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+
+    margin-top: -62px;
+    margin-bottom: 18px;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #091126;
+    border: 2px solid #00e5ff;
+
+    box-shadow:
+        0 0 25px rgba(0, 229, 255, 0.25);
+
+    font-size: 30px;
+}
+
+.service .sector-icon {
+    border-color: #a855ff;
+    box-shadow:
+        0 0 25px rgba(168, 85, 255, 0.25);
+}
+
+.technical .sector-icon {
+    border-color: #65ff45;
+    box-shadow:
+        0 0 25px rgba(101, 255, 69, 0.25);
+}
+
+
+/* =========================================
+   SECTOR TITLE
+========================================= */
+
+.sector-content h3 {
+    margin: 0 0 12px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+
+    color: #00e5ff;
+}
+
+.service .sector-content h3 {
+    color: #a855ff;
+}
+
+.technical .sector-content h3 {
+    color: #65ff45;
+}
+
+
+/* =========================================
+   SECTOR DESCRIPTION
+========================================= */
+
+.sector-content p {
+    color: #aeb8cf;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 0 0 18px;
+}
+
+
+/* =========================================
+   EXPLORE BUTTON
+========================================= */
+
+.explore-btn {
+    margin-top: auto;
+
+    border: none;
+    background: transparent;
+
+    color: #00e5ff;
+
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 12px #00e5ff;
+}
+
+.service .explore-btn {
+    color: #a855ff;
+}
+
+.technical .explore-btn {
+    color: #65ff45;
+}
+
+
+/* =========================================
+   SECTOR DETAILS POPUP
+========================================= */
+
+.sector-modal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    backdrop-filter: blur(10px);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    z-index: 9999;
+}
+
+.sector-modal.active {
+    display: flex;
+}
+
+
+/* =========================================
+   POPUP BOX
+========================================= */
+
+.modal-box {
+    width: 100%;
+    max-width: 650px;
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 38px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(10, 20, 48, 0.98),
+            rgba(5, 10, 28, 0.98));
+
+    border: 1px solid rgba(0, 220, 255, 0.5);
+
+    box-shadow:
+        0 0 60px rgba(0, 210, 255, 0.15);
+
+    position: relative;
+
+    animation: sectorModalOpen 0.3s ease;
+}
+
+@keyframes sectorModalOpen {
+
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.modal-close {
+    position: absolute;
+
+    top: 18px;
+    right: 22px;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(255, 70, 70, 0.2);
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   POPUP TITLE
+========================================= */
+
+.modal-box h2 {
+    font-family: "Orbitron", sans-serif;
+
+    color: #00e5ff;
+
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   POPUP DESCRIPTION
+========================================= */
+
+.modal-box>p {
+    color: #aeb8cf;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   SECTOR OPTIONS
+========================================= */
+
+.sector-options {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.sector-option {
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #e8edff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.sector-option:hover {
+    transform: translateX(5px);
+
+    border-color: #00e5ff;
+
+    background: rgba(0, 220, 255, 0.06);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .sector-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .sectors-section h2 {
+        font-size: 38px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .sectors-section {
+        padding: 70px 20px;
+    }
+
+    .sectors-section h2 {
+        font-size: 30px;
+    }
+
+    .sector-image {
+        height: 240px;
+    }
+
+    .sector-options {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-box {
+        padding: 28px 20px;
+    }
+
+}
